@@ -13,13 +13,13 @@ import { MainComponent } from './layout/main/main.component';
 export const routes: Routes = [
 
     // default component routes
-    { path: 'home', component: MainComponent }, 
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'blog', component: BlogComponent },
-    { path: 'privacy-terms', component: PrivacyTermsComponent },
-    { path: 'cv', component: CvComponent },
+    { path: 'home', title: 'Home', component: MainComponent }, 
+    { path: 'about', title: 'About', component: AboutComponent },
+    { path: 'contact', title: 'Contact', component: ContactComponent },
+    { path: 'projects', title: 'Projects', component: ProjectsComponent },
+    { path: 'blog', title: 'Blog', component: BlogComponent },
+    { path: 'privacy-terms', title: 'Privacy & Terms', component: PrivacyTermsComponent },
+    { path: 'cv', title: 'CV', component: CvComponent },
 
     // redirects
     { path: '', redirectTo: 'home', pathMatch: 'full' }, 
