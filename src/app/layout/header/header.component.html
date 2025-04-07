@@ -1,1 +1,49 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/home">Logo</a>
+  <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isSmallScreen">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <nav *ngIf="!isSmallScreen">
+    <a mat-button routerLink="/cv" 
+    routerLinkActive="activebutton"
+    ariaCurrentWhenActive="page">CV</a>
+    <a mat-button routerLink="/contact"
+    routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Contact</a>
+    <a mat-button routerLink="/projects"
+    routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Projects</a>
+    <a mat-button [matMenuTriggerFor]="afterMenuBig"
+    routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">About</a>
+    <mat-menu #afterMenuBig="matMenu" xPosition="after">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <a mat-button routerLink="/blog"
+    routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Blog</a>
+  </nav>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/cv"
+  routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">CV</button>
+  <button mat-menu-item routerLink="/contact"
+  routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Contact</button>
+  <button mat-menu-item routerLink="/projects"
+  routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Projects</button>
+  <button mat-menu-item [matMenuTriggerFor]="afterMenu"
+  routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">About</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button mat-menu-item routerLink="/blog"
+  routerLinkActive="activebutton"
+     ariaCurrentWhenActive="page">Blog</button>
+</mat-menu>

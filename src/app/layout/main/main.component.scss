@@ -1,0 +1,11 @@
+main.mat-grid-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.mat-grid-item {
+  max-width: 800px; 
+  margin: 20px; 
+}
